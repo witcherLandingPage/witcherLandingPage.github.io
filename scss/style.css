@@ -1,0 +1,590 @@
+html, body {
+  margin: 0;
+  font-family: 'Berserker-Regular', serif; }
+
+section {
+  overflow: hidden; }
+
+a {
+  text-decoration: none; }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background: #000000; }
+  .preloader .logo {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -120px;
+    z-index: 9; }
+  .preloader .preloader-lines {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #000;
+    z-index: 8; }
+  .preloader .preloader-lines-inner {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #000;
+    z-index: 7;
+    text-align: center; }
+
+.part {
+  display: grid;
+  position: relative; }
+
+.epic-journey:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 11.3vw;
+  background: url(../img/back-top22.png) right bottom no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 8; }
+
+.back-journey {
+  width: 130%;
+  filter: grayscale(70%); }
+
+.geralt-img {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 70%; }
+
+.inner-text {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-left: -185px;
+  margin-top: -125px; }
+  .inner-text .inner h1 {
+    letter-spacing: 5px;
+    font-size: 5.2vw;
+    color: #fff; }
+
+.new-beginners {
+  position: relative;
+  z-index: 8;
+  min-height: 600px;
+  background: url(../img/back-img22.jpg) left top no-repeat;
+  background-size: 100%; }
+
+.logo-section {
+  position: absolute;
+  z-index: 9;
+  top: 5%;
+  left: 20%;
+  transition: 1.5s all;
+  opacity: 0; }
+  .logo-section img {
+    width: 350px; }
+
+.inner-section-2 {
+  position: absolute;
+  z-index: 9;
+  top: 45%;
+  left: 8%;
+  letter-spacing: 2px;
+  font-size: 4.8vw;
+  color: #fff;
+  transition: 1.5s all;
+  opacity: 0; }
+
+.black-monster {
+  background-color: #292929; }
+
+.black {
+  min-height: 400px;
+  position: relative;
+  background-image: url("../img/bg-black.jpg");
+  background-size: cover;
+  left: 4vw; }
+
+.inner-text-black {
+  transition: 1.5s all;
+  opacity: 0;
+  width: 40%;
+  padding: 8vw 6vw 8vw 10vw;
+  max-width: 850px;
+  float: right; }
+  .inner-text-black .title-black {
+    font-size: 3.2vw;
+    color: #fff; }
+  .inner-text-black p {
+    font-size: 1.125em;
+    line-height: 2em;
+    letter-spacing: 0.04em;
+    color: #fff; }
+
+.img-href {
+  width: 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+  .img-href:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+
+.img-container {
+  position: relative;
+  width: 40%; }
+  .img-container .rel {
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    left: 15%; }
+    .img-container .rel.img-1 {
+      margin-top: -10%; }
+
+.red {
+  min-height: 400px;
+  position: relative;
+  background-image: url("../img/bg-redd.png");
+  background-size: cover; }
+
+.inner-text-red {
+  transition: 1.5s all;
+  opacity: 0;
+  width: 40%;
+  padding: 8vw 6vw 8vw 10vw;
+  max-width: 850px; }
+  .inner-text-red .title-red {
+    font-size: 3.2vw;
+    color: #fff; }
+  .inner-text-red p {
+    font-size: 1.125em;
+    line-height: 2em;
+    letter-spacing: 0.04em;
+    color: #fff; }
+
+.img-monster {
+  position: absolute;
+  top: -300px;
+  right: 0;
+  width: 550px; }
+
+.vicious-combat {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%; }
+  .vicious-combat:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 11.3vw;
+    background: url(../img/top-fire-village.png) right bottom no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 8; }
+
+.img.vicious-left {
+  min-height: 400px;
+  position: relative;
+  background-image: url("../img/forest.jpg");
+  background-size: cover;
+  filter: grayscale(50%); }
+
+.text.vicious-right {
+  min-height: 400px;
+  position: relative;
+  background-image: url("../img/bg-marble.jpg");
+  background-size: cover; }
+
+.wrap-text {
+  padding: 8vw 6vw 8vw 10vw;
+  max-width: 850px;
+  transition: 1.5s all;
+  opacity: 0; }
+  .wrap-text .title-combat {
+    font-size: 3.2vw;
+    color: #222; }
+  .wrap-text p {
+    font-size: 1.125em;
+    line-height: 2em;
+    letter-spacing: 0.04em;
+    color: #222; }
+
+.buy {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  min-height: 600px;
+  background: url(../img/fire-village.jpg) left top no-repeat;
+  background-size: 100%; }
+  .buy:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 11.3vw;
+    background: url(../img/bg-top-buy1.png) right bottom no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 8; }
+  .buy p {
+    position: absolute;
+    bottom: 30%;
+    left: 70%;
+    color: #fff;
+    font-size: 3.2vw;
+    letter-spacing: 3px;
+    transition: 1.5s all;
+    opacity: 0; }
+    .buy p i {
+      font-size: 1.2vw;
+      letter-spacing: 3px; }
+
+.order {
+  position: relative;
+  z-index: 8;
+  min-height: 450px;
+  background: url(../img/bg-buy.jpg) left top no-repeat;
+  background-size: 100%; }
+  .order:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 11.3vw;
+    background: url(../img/bg-top-footer.png) right bottom no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 8; }
+
+.box {
+  position: absolute;
+  top: 10%;
+  left: 7%; }
+  .box .order-disk {
+    position: relative;
+    transform: translateY(0px);
+    transition: transform .3s ease-in-out; }
+    .box .order-disk:hover {
+      transform: translateY(-25px); }
+    .box .order-disk:nth-child(1) {
+      left: 73px; }
+    .box .order-disk:nth-child(3) {
+      left: -75px; }
+
+.text-order {
+  position: absolute;
+  left: 60%;
+  top: 5%;
+  transition: 1.5s all;
+  opacity: 0; }
+  .text-order h1 {
+    font-size: 3.2vw;
+    color: #893024; }
+  .text-order p {
+    font-size: 1.125em;
+    line-height: 2em;
+    letter-spacing: 0.04em; }
+
+.footer {
+  position: relative;
+  z-index: 8;
+  min-height: 200px;
+  background: url(../img/bg-footer.jpg) left top no-repeat;
+  background-size: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  text-align: center; }
+  .footer .footer-legal {
+    color: #535353;
+    font-size: 0.875em;
+    line-height: 1.4em;
+    padding-right: 30px; }
+
+.content-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #882f23;
+  z-index: 9;
+  transition: 2s all;
+  transform: translateX(-200%); }
+  .content-overlay .inner-layout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    z-index: 9;
+    transform: translateX(-100%); }
+
+.open {
+  transform: translateX(100%); }
+
+.big-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 5%;
+  margin-left: 15%;
+  width: 70%; }
+
+.close-btn {
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  color: #fff;
+  font-size: 25px;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: .2s linear; }
+  .close-btn:hover {
+    transform: rotate(360deg); }
+
+body .show {
+  opacity: 1; }
+
+@media screen and (max-width: 1280px) {
+  .new-beginners, .buy {
+    min-height: 489px; }
+
+  .order {
+    min-height: 420px; }
+
+  .img-monster {
+    top: -250px;
+    width: 450px; } }
+@media screen and (max-width: 1000px) {
+  .new-beginners, .buy {
+    min-height: 450px; }
+
+  .order {
+    min-height: 380px; }
+
+  .inner-text {
+    top: 30%;
+    left: 20%;
+    margin: 0; }
+
+  .logo-section img {
+    width: 300px; }
+
+  .inner-section-2 {
+    top: 45%;
+    left: 16%;
+    font-size: 4.3vw; }
+
+  .box {
+    top: 10%;
+    left: 0%; } }
+@media screen and (max-width: 920px) {
+  .new-beginners, .buy {
+    min-height: 350px; }
+
+  .order {
+    min-height: 330px; }
+
+  .logo-section img {
+    width: 250px; }
+
+  .inner-section-2 {
+    top: 50%;
+    left: 15%;
+    letter-spacing: 2px;
+    font-size: 4.0vw; }
+
+  .black .inner-text-black p {
+    font-size: 1.0em; }
+
+  .red {
+    background-size: auto; }
+    .red .inner-text-red {
+      width: 100%;
+      padding: 8vw 0 8vw 5px; }
+      .red .inner-text-red .title-red {
+        font-size: 1.625em;
+        font-family: 'Berserker-Regular', serif;
+        margin-bottom: 4vw;
+        letter-spacing: 0.25em;
+        text-align: center; }
+      .red .inner-text-red p {
+        font-size: 1.125em;
+        line-height: 1.4em;
+        letter-spacing: 0.04em;
+        padding: 0 2vw 0 2vw; }
+
+  .vicious-combat {
+    grid-template-columns: 100%; }
+    .vicious-combat .text.vicious-right .wrap-text {
+      width: 100%;
+      padding: 8vw 0 8vw 5px; }
+    .vicious-combat .text.vicious-right .title-combat {
+      font-size: 1.625em;
+      font-family: 'Berserker-Regular', serif;
+      margin-bottom: 4vw;
+      letter-spacing: 0.25em;
+      text-align: center; }
+    .vicious-combat .text.vicious-right p {
+      font-size: 1.125em;
+      line-height: 1.4em;
+      letter-spacing: 0.04em;
+      padding: 0 2vw 0 2vw; }
+
+  .box {
+    top: 0;
+    left: 0; }
+    .box .order-disk:nth-child(1) {
+      left: 0; }
+    .box .order-disk:nth-child(2) {
+      left: -80px; }
+    .box .order-disk:nth-child(3) {
+      left: -155px; }
+
+  .text-order {
+    top: 0; }
+    .text-order h1 {
+      font-size: 1.625em;
+      font-family: 'Berserker-Regular', serif;
+      margin-bottom: 4vw;
+      letter-spacing: 0.25em;
+      text-align: center; }
+
+  .img-monster {
+    display: none; } }
+@media screen and (max-width: 715px) {
+  .new-beginners, .buy {
+    min-height: 280px; }
+
+  .order {
+    min-height: 220px; }
+
+  .logo-section img {
+    width: 200px; }
+
+  .inner-section-2 {
+    left: 17%;
+    font-size: 3.2vw; }
+
+  .black {
+    left: 0;
+    background-size: contain; }
+
+  .inner-text-black {
+    width: 100%;
+    padding: 8vw 0 8vw 5px; }
+    .inner-text-black .title-black {
+      font-size: 1.625em;
+      font-family: 'Berserker-Regular', serif;
+      margin-bottom: 4vw;
+      letter-spacing: 0.25em;
+      text-align: center; }
+    .inner-text-black p {
+      font-size: 1.125em;
+      line-height: 1.4em;
+      letter-spacing: 0.04em;
+      padding: 0 2vw 0 2vw; }
+
+  .img-container {
+    width: 100%; }
+    .img-container .rel {
+      overflow: visible;
+      left: 0; }
+      .img-container .rel.img-1 {
+        margin: 0; }
+
+  .buy p {
+    position: absolute;
+    bottom: 30%;
+    left: 60%;
+    color: #fff;
+    font-size: 3.0vw;
+    letter-spacing: 2px; }
+  .buy .quote {
+    position: absolute;
+    bottom: 25%;
+    left: 60%;
+    color: #fff;
+    font-size: 1.2vw;
+    letter-spacing: 2px; }
+
+  .box {
+    top: 0;
+    left: 0; }
+    .box .order-disk {
+      width: 23%; }
+      .box .order-disk:nth-child(1) {
+        left: 0; }
+      .box .order-disk:nth-child(2) {
+        left: -55px; }
+      .box .order-disk:nth-child(3) {
+        left: -115px; }
+
+  .text-order {
+    left: 50%;
+    top: 0; }
+    .text-order h1 {
+      font-size: 1.2em;
+      font-family: 'Berserker-Regular', serif;
+      letter-spacing: 0.25em;
+      text-align: center; }
+    .text-order p {
+      font-size: 0.8em;
+      letter-spacing: 0.04em; }
+
+  .footer {
+    grid-template-columns: 100%; }
+    .footer .footer-legal {
+      padding-right: 0; }
+
+  .big-img {
+    osition: absolute;
+    top: 25%;
+    left: 0;
+    margin: 0;
+    width: 100%; } }
+@media screen and (max-width: 572px) {
+  .new-beginners, .buy {
+    min-height: 220px; }
+
+  .order {
+    min-height: 170px; }
+
+  .logo-section img {
+    width: 120px; } }
+@media screen and (max-width: 450px) {
+  .preloader .logo {
+    width: 300px;
+    margin-left: -150px;
+    margin-top: -80px; }
+
+  .new-beginners, .buy {
+    min-height: 170px; }
+
+  .order {
+    min-height: 150px; } }
+
+/*# sourceMappingURL=style.css.map */

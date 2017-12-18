@@ -1,0 +1,697 @@
+@mixin position($color){
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: $color;
+}
+@mixin backImg($grace){
+  width: 130%;
+  filter: grayscale($grace);
+}
+@mixin sectorImg($url){
+  min-height: 400px;
+  position: relative;
+  background-image: url($url);
+  background-size: cover;
+}
+@mixin innerText{
+  width: 40%;
+  padding: 8vw 6vw 8vw 10vw;
+  max-width: 850px;
+}
+@mixin titleStyle{
+  font-size: 3.2vw;
+  color: #fff;
+}
+@mixin pStyle{
+  font-size: 1.125em;
+  line-height: 2em;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+@mixin mobDiv{
+  width: 100%;
+  padding: 8vw 0 8vw 5px;
+}
+@mixin mobTitle{
+  font-size: 1.625em;
+  font-family: 'Berserker-Regular', serif;
+  margin-bottom: 4vw;
+  letter-spacing: 0.25em;
+  text-align: center;
+}
+@mixin mobP{
+  font-size: 1.125em;
+  line-height: 1.4em;
+  letter-spacing: 0.04em;
+}
+html, body{
+  margin: 0;
+  font-family: 'Berserker-Regular', serif;
+}
+section{
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+.preloader{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background: #000000;
+    .logo {
+      position: absolute;
+      width: 500px;
+      top: 50%;
+      left: 50%;
+      margin-left: -250px;
+      margin-top: -120px;
+      z-index: 9;
+    }
+  .preloader-lines{
+    @include position(#000);
+    z-index: 8;
+  }
+  .preloader-lines-inner{
+    @include position(#000);
+    z-index: 7;
+    text-align: center;
+  }
+}
+
+
+.part{
+  display: grid;
+  position: relative;
+}
+.epic-journey{
+  &:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 11.3vw;
+    background: url(../img/back-top22.png) right bottom no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+  }
+}
+.back-journey{
+  @include backImg(70%);
+}
+.geralt-img{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 70%;
+}
+.inner-text{
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  margin-left: -185px;
+  margin-top: -125px;
+  .inner{
+    h1{
+      letter-spacing: 5px;
+      font-size: 5.2vw;
+      color: #fff;
+    }
+  }
+}
+
+//section2
+.new-beginners{
+  position: relative;
+  z-index: 8;
+  min-height: 600px;
+  background: url(../img/back-img22.jpg) left top no-repeat;
+  background-size: 100%;
+}
+
+.logo-section{
+  position: absolute;
+  z-index: 9;
+  top: 5%;
+  left: 20%;
+  transition: 1.5s all;
+  opacity: 0;
+  img{
+    width: 350px;
+  }
+}
+.inner-section-2{
+  position: absolute;
+  z-index: 9;
+  top: 45%;
+  left: 8%;
+  letter-spacing: 2px;
+  font-size: 4.8vw;
+  color: #fff;
+  transition: 1.5s all;
+  opacity: 0;
+}
+//end section2
+//sector 3
+.black-monster{
+  background-color: #292929;
+}
+.black{
+  @include sectorImg("../img/bg-black.jpg");
+  left: 4vw;
+}
+.inner-text-black{
+  transition: 1.5s all;
+  opacity: 0;
+  @include innerText;
+  float: right;
+  .title-black{
+    @include titleStyle;
+  }
+  p{
+    @include pStyle;
+  }
+}
+.img-href{
+  width: 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  &:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.img-container{
+  position: relative;
+  width: 40%;
+  .rel{
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    left: 15%;
+    &.img-1{
+      margin-top:-10%;
+    }
+
+  }
+}
+.red{
+  @include sectorImg("../img/bg-redd.png");
+}
+.inner-text-red{
+  transition: 1.5s all;
+  opacity: 0;
+  @include innerText;
+  .title-red{
+    @include titleStyle;
+  }
+  p{
+    @include pStyle;
+  }
+}
+.img-monster{
+  position: absolute;
+  top: -300px;
+  right: 0;
+  width: 550px;
+}
+//end sector 3
+//sector 4
+.vicious-combat{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 11.3vw;
+      background: url(../img/top-fire-village.png) right bottom no-repeat;
+      background-size: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 8;
+  }
+}
+.img{
+  &.vicious-left{
+    @include sectorImg("../img/forest.jpg");
+    filter: grayscale(50%);
+  }
+}
+.text{
+  &.vicious-right{
+    @include sectorImg("../img/bg-marble.jpg");
+  }
+}
+.wrap-text{
+  padding: 8vw 6vw 8vw 10vw;
+  max-width: 850px;
+  transition: 1.5s all;
+  opacity: 0;
+  .title-combat{
+    font-size: 3.2vw;
+    color: #222;
+  }
+  p{
+    font-size: 1.125em;
+    line-height: 2em;
+    letter-spacing: 0.04em;
+    color: #222;
+  }
+}
+//end sector 4
+//section 5
+.buy{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  min-height: 600px;
+  background: url(../img/fire-village.jpg) left top no-repeat;
+  background-size: 100%;
+  &:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 11.3vw;
+    background: url(../img/bg-top-buy1.png) right bottom no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+  }
+  p{
+    position: absolute;
+    bottom: 30%;
+    left: 70%;
+    color: #fff;
+    font-size: 3.2vw;
+    letter-spacing: 3px;
+    transition: 1.5s all;
+    opacity: 0;
+    i{
+      font-size: 1.2vw;
+      letter-spacing: 3px;
+    }
+  }
+}
+//end section 5
+//section 6
+.order{
+  position: relative;
+  z-index: 8;
+  min-height: 450px;
+  background: url(../img/bg-buy.jpg) left top no-repeat;
+  background-size: 100%;
+  &:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 11.3vw;
+    background: url(../img/bg-top-footer.png) right bottom no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+  }
+}
+.box{
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  .order-disk{
+    position: relative;
+    transform: translateY(0px);
+    transition: transform .3s ease-in-out;
+    &:hover{
+      transform: translateY(-25px);
+    }
+    &:nth-child(1){
+      left: 73px;
+    }
+    &:nth-child(3){
+      left: -75px;
+    }
+  }
+}
+.text-order{
+  position: absolute;
+  left: 60%;
+  top: 5%;
+  transition: 1.5s all;
+  opacity: 0;
+  h1{
+    font-size: 3.2vw;
+    color: #893024;
+  }
+  p{
+    font-size: 1.125em;
+    line-height: 2em;
+    letter-spacing: 0.04em;
+  }
+}
+//end section 6
+
+//footer
+.footer{
+  position: relative;
+  z-index: 8;
+  min-height: 200px;
+  background: url(../img/bg-footer.jpg) left top no-repeat;
+  background-size: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  text-align: center;
+  .footer-legal{
+    color: #535353;
+    font-size: 0.875em;
+    line-height: 1.4em;
+    padding-right: 30px;
+  }
+}
+//end footer
+
+//Big img
+.content-overlay{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #882f23;
+  z-index: 9;
+  transition: 2s all;
+  transform: translateX(-200%);
+  .inner-layout{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    z-index: 9;
+    transform: translateX(-100%);
+  }
+}
+.open{
+  transform: translateX(100%);
+}
+.big-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 5%;
+  margin-left: 15%;
+  width: 70%;
+}
+.close-btn{
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  color: #fff;
+  font-size: 25px;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: .2s linear;
+  &:hover{
+    transform: rotate(360deg);
+  }
+}
+//End big img
+
+body .show{
+  opacity: 1;
+}
+
+//adaptive
+
+@media screen and (max-width: 1280px){
+  .new-beginners, .buy{
+    min-height: 489px;
+  }
+  .order{
+    min-height: 420px;
+  }
+  .img-monster{
+    top: -250px;
+    width: 450px;
+  }
+}
+@media screen and (max-width: 1000px){
+  .new-beginners, .buy{
+    min-height: 450px;
+  }
+  .order{
+    min-height: 380px;
+  }
+  .inner-text{
+    top: 30%;
+    left: 20%;
+    margin: 0;
+  }
+  .logo-section{
+    img{
+      width: 300px;
+    }
+  }
+  .inner-section-2{
+    top: 45%;
+    left: 16%;
+    font-size: 4.3vw;
+  }
+  .box{
+    top: 10%;
+    left: 0%;
+  }
+}
+@media screen and (max-width: 920px){
+  .new-beginners, .buy{
+    min-height: 350px;
+  }
+  .order{
+    min-height: 330px;
+  }
+  .logo-section{
+    img{
+      width: 250px;
+    }
+  }
+  .inner-section-2{
+    top: 50%;
+    left: 15%;
+    letter-spacing: 2px;
+    font-size: 4.0vw;
+  }
+  .black{
+    .inner-text-black{
+      p{
+        font-size: 1.0em;
+      }
+    }
+  }
+  .red{
+    background-size: auto;
+    .inner-text-red{
+      @include mobDiv;
+      .title-red{
+        @include mobTitle;
+      }
+      p{
+        @include mobP;
+        padding: 0 2vw 0 2vw;
+      }
+    }
+  }
+  .vicious-combat{
+    grid-template-columns: 100%;
+    .text{
+      &.vicious-right{
+        .wrap-text{
+          @include mobDiv;
+        }
+        .title-combat{
+          @include mobTitle;
+        }
+        p{
+          @include mobP;
+          padding: 0 2vw 0 2vw;
+        }
+      }
+    }
+  }
+  .box{
+    top:0;
+    left: 0;
+    .order-disk{
+      &:nth-child(1){
+        left: 0;
+      }
+      &:nth-child(2){
+        left: -80px;
+      }
+      &:nth-child(3){
+        left: -155px;
+      }
+    }
+  }
+  .text-order{
+    top:0;
+    h1{
+      @include mobTitle;
+    }
+  }
+  .img-monster{
+    display: none;
+  }
+}
+@media screen and (max-width: 715px){
+  .new-beginners, .buy{
+    min-height: 280px;
+  }
+  .order{
+    min-height: 220px;
+  }
+  .logo-section{
+    img{
+      width: 200px;
+    }
+  }
+  .inner-section-2{
+    left: 17%;
+    font-size: 3.2vw;
+  }
+  .black{
+    left: 0;
+    background-size: contain;
+  }
+  .inner-text-black{
+    @include mobDiv;
+
+    .title-black{
+      @include mobTitle;
+    }
+    p {
+      @include mobP;
+      padding: 0 2vw 0 2vw;
+    }
+  }
+  .img-container{
+    width: 100%;
+    .rel{
+      overflow: visible;
+      left: 0;
+      &.img-1{
+        margin: 0;
+      }
+    }
+  }
+  .buy{
+    p{
+      position: absolute;
+      bottom: 30%;
+      left: 60%;
+      color: #fff;
+      font-size: 3.0vw;
+      letter-spacing: 2px;
+    }
+    .quote{
+      position: absolute;
+      bottom: 25%;
+      left: 60%;
+      color: #fff;
+      font-size: 1.2vw;
+      letter-spacing: 2px;
+    }
+  }
+  .box{
+    top:0;
+    left:0;
+    .order-disk{
+      width: 23%;
+      &:nth-child(1){
+        left:0;
+      }
+      &:nth-child(2){
+        left:-55px;
+      }
+      &:nth-child(3){
+        left:-115px;
+      }
+    }
+  }
+  .text-order{
+    left: 50%;
+    top:0;
+    h1{
+      font-size: 1.2em;
+      font-family: 'Berserker-Regular', serif;
+      letter-spacing: 0.25em;
+      text-align: center;
+    }
+    p{
+      font-size: 0.8em;
+      letter-spacing: 0.04em;
+    }
+  }
+  .footer{
+    grid-template-columns: 100%;
+    .footer-legal {
+      padding-right: 0;
+    }
+  }
+  .big-img{
+    osition: absolute;
+    top: 25%;
+    left: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 572px){
+  .new-beginners, .buy{
+    min-height: 220px;
+  }
+  .order{
+    min-height: 170px;
+  }
+  .logo-section{
+    img{
+      width: 120px;
+    }
+  }
+}
+@media screen and (max-width: 450px){
+  .preloader{
+    .logo{
+      width: 300px;
+      margin-left: -150px;
+      margin-top: -80px;
+    }
+  }
+  .new-beginners, .buy{
+    min-height: 170px;
+  }
+  .order{
+    min-height: 150px;
+  }
+}
+//end adaptive
+
